@@ -1,0 +1,28 @@
+plugins {
+  id 'java'
+  id 'eclipse'
+  id 'org.springframework.boot' version '3.1.1'
+}
+
+wrapper {
+  gradleVersion = 8.3
+}
+
+repositories {
+  mavenCentral()
+}
+
+compileJava {
+  options.compilerArgs << '-parameters'
+}
+
+dependencies {
+  implementation platform("org.springframework.boot:spring-boot-dependencies:3.1.1")
+  annotationProcessor platform("org.springframework.boot:spring-boot-dependencies:3.1.1")
+
+  implementation 'org.springframework.boot:spring-boot-starter-web'
+  implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.2'
+
+  runtimeOnly 'org.postgresql:postgresql'
+}
+
