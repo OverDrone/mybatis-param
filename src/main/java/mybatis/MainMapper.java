@@ -13,4 +13,10 @@ public interface MainMapper {
 
   @Select("SELECT #{rec.value}")
   String test3(MainRecord rec, String val);
+
+  @Select("SELECT #{cl.value}")
+  String test4(MainClass cl);
+
+  @Select("SELECT #{cl.value}")
+  String test5(MainClass cl, String val);
 }
