@@ -1,0 +1,1 @@
+To run project type gradlew in terminal
